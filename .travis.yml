@@ -1,0 +1,10 @@
+sudo: required
+services: docker
+language: bash
+branches:
+  only:
+  - master
+script:
+- docker build --tag ${TRAVIS_REPO_SLUG}:${TRAVIS_BUILD_NUMBER} --tag ${TRAVIS_REPO_SLUG}:latest .
+after_success:
+- "./push.sh"
