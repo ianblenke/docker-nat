@@ -1,10 +1,5 @@
 version: '3.4'
 
-volumes:
-
-  dnsmasq-leases:
-    driver: local
-
 networks:
 
   vlan20:
@@ -25,8 +20,6 @@ services:
     privileged: true
     environment:
       IP_ADDRESS: "10.20.0.1/22"
-    volumes:
-      - dnsmasq-leases:/var/lib/misc
     networks:
       - default
       - vlan20

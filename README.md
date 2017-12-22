@@ -6,3 +6,6 @@ The primary reason for this container was to provide NAT default gateways for so
 
 Long story short, this solution is lighter than building VMs to service this need.
 
+# Usage:
+
+    docker-compose up -d
